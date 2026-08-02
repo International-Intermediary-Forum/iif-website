@@ -1,0 +1,12 @@
+{
+  "name": "iif-website",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev public --port 4173",
+    "test": "node --check public/script.js",
+    "deploy": "wrangler pages deploy public --project-name=iif-website --branch=main"
+  },
+  "devDependencies": {
+    "wrangler": "^4.118.0"
+  }
+}
