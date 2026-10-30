@@ -7,6 +7,6 @@
     "deploy": "wrangler pages deploy public --project-name=iif-website --branch=main"
   },
   "devDependencies": {
-    "wrangler": "^4.118.0"
+    "wrangler": "^4.156.0"
   }
 }
