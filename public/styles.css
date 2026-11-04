@@ -105,8 +105,7 @@ a { color: inherit; }
 }
 
 .primary-nav a:hover::after,
-.primary-nav a:focus-visible::after,
-.primary-nav a.active::after { transform: scaleX(1); }
+.primary-nav a:focus-visible::after { transform: scaleX(1); }
 
 .menu-toggle { display: none; }
 
