@@ -256,11 +256,11 @@ a { color: inherit; }
 .network-lines svg { width: 100%; height: 100%; }
 
 @media (min-width: 821px) {
-  .info-row:nth-child(1) { height: 167px; padding-block: 20px; }
-  .info-row:nth-child(2) { height: 141px; padding-block: 18px; }
-  .info-row:nth-child(3) { height: 151px; padding-block: 20px; }
-  .info-row:nth-child(4) { height: 121px; padding-block: 13px; }
-  .info-row:nth-child(5) { height: 122px; padding-block: 14px; }
+  .info-row:nth-child(1) { min-height: 167px; padding-block: 20px; }
+  .info-row:nth-child(2) { min-height: 141px; padding-block: 18px; }
+  .info-row:nth-child(3) { min-height: 151px; padding-block: 20px; }
+  .info-row:nth-child(4) { min-height: 121px; padding-block: 13px; }
+  .info-row:nth-child(5) { min-height: 122px; padding-block: 14px; }
 
   .info-row:nth-child(2) .icon-disc,
   .info-row:nth-child(3) .icon-disc { width: 101px; height: 101px; }
