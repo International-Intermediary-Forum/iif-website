@@ -201,6 +201,9 @@ a { color: inherit; }
 }
 
 .info-copy p { margin: 0; max-width: 710px; font-size: 15px; line-height: 1.62; }
+.info-copy p + p { margin-top: 6px; }
+.info-copy a { color: var(--navy); font-weight: 650; text-underline-offset: 3px; }
+.info-copy a:hover { text-decoration-thickness: 2px; }
 
 .illustration {
   width: min(var(--content), calc(100% - 56px));
