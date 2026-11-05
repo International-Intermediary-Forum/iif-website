@@ -205,19 +205,41 @@ a { color: inherit; }
 .info-copy a { color: var(--navy); font-weight: 650; text-underline-offset: 3px; }
 .info-copy a:hover { text-decoration-thickness: 2px; }
 
+/* Full-width illustration band. The image is centred at a modest height and its
+   edges fade into a backdrop that follows the map's own colours (sampled from the
+   image's map-only sides), with the blue desk strip (#376ea7, bottom 5.45%) running
+   the full width into the footer, which starts in the same colour. On narrow
+   screens the image is wider than the viewport and is cropped at the sides. */
 .illustration {
-  width: min(var(--content), calc(100% - 56px));
-  margin: 36px auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 24px 0 0;
+  background: linear-gradient(to bottom,
+    #fff 0%, #4686b2 15%, #5587b3 20%, #6e95bd 30%, #7a93bf 40%, #8fa3c9 50%,
+    #a7b7d5 60%, #c0cae1 70%, #d2d7e9 78%, #e0e5ef 84%, #eaeef6 88%, #f6f8fc 94.55%,
+    #376ea7 94.55%, #376ea7 100%);
 }
 
-.illustration img { display: block; width: 100%; height: auto; }
+.illustration img {
+  display: block;
+  flex: none;
+  width: auto;
+  height: clamp(210px, 21vw, 440px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 14%), linear-gradient(to right, transparent, #000 16%, #000 84%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, transparent, #000 14%), linear-gradient(to right, transparent, #000 16%, #000 84%, transparent);
+  mask-composite: intersect;
+}
 
 .site-footer {
   position: relative;
   min-height: 197px;
   overflow: hidden;
   color: #fff;
-  background: linear-gradient(104deg, #073765 0%, #063a6c 48%, #05264c 100%);
+  background:
+    linear-gradient(to bottom, #376ea7, rgba(55, 110, 167, 0) 80px),
+    linear-gradient(104deg, #073765 0%, #063a6c 48%, #05264c 100%);
 }
 
 .footer-inner {
@@ -324,7 +346,7 @@ a { color: inherit; }
   .hero h1 { font-size: clamp(44px, 13vw, 58px); }
   .hero p { width: min(90%, 410px); font-size: 17px; }
   .hero { background-position: center, 58% center; }
-  .illustration { width: min(100% - 40px, var(--content)); margin: 28px auto; }
+  .illustration { margin-top: 16px; }
   .gold-rule { margin: 27px 0 21px; }
 
   .info-row {
