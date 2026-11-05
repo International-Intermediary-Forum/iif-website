@@ -113,7 +113,7 @@ a { color: inherit; }
   position: relative;
   min-height: 472px;
   overflow: hidden;
-  background: linear-gradient(90deg, #f7fafc 0%, rgba(247,250,252,.96) 28%, rgba(237,245,250,.68) 56%, rgba(237,245,250,.15) 100%), url("assets/blue-map.jpg") center 42% / cover no-repeat;
+  background: linear-gradient(90deg, #f7fafc 0%, rgba(247,250,252,.96) 28%, rgba(237,245,250,.68) 56%, rgba(237,245,250,.15) 100%), url("assets/blue-map.webp") center 42% / cover no-repeat;
 }
 
 .hero-inner {
