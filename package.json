@@ -3,10 +3,13 @@
   "private": true,
   "scripts": {
     "dev": "wrangler pages dev public --port 4173",
-    "test": "node --check public/script.js",
+    "test": "node --check public/script.js && node --check tests/site-test.js",
+    "test:browser": "node tests/site-test.js",
+    "test:live": "node tests/site-test.js https://internationalintermediaryforum.org",
     "deploy": "wrangler pages deploy public --project-name=iif-website --branch=main"
   },
   "devDependencies": {
+    "playwright": "^1.57.0",
     "wrangler": "^4.156.0"
   }
 }
