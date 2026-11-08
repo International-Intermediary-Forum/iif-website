@@ -5,6 +5,8 @@
 - This repository is the future website for the International Intermediary Forum.
 - The production site is dependency-free HTML, CSS, and JavaScript in `public/`. npm is used only for deployment tooling.
 - `assets/ChatGPT Image Aug 3, 2026, 10_46_03 AM.png` is the visual and content reference; it is not deployed.
+- Production is the Cloudflare Pages project `iif-website`, served at `https://internationalintermediaryforum.org`. Plain HTTP and `www` redirect to that address through Cloudflare zone settings (Always Use HTTPS and a redirect rule), not repository config. `iif-website.pages.dev` is still publicly reachable.
+- `public/404.html` is served with a 404 status for any missing path at any depth, so every URL on that page must be root-relative.
 
 ## Implementation
 
